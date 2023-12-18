@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web model</title>
+    <style>
+ .center  {
+    margin: auto;
+    width: 50%;
+    border: 5px inset black;
+    padding: 10px;
+    margin-top: 70%;
+    text-align: center;
+    background: orange;
+    color: snow;
+    font-size: 1.2em;
+}
+a { color: inherit; 
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    margin-top: 70%;
+    padding-top: 50px;
+    width: 250px;
+    height: 70px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    background: orangered;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: aliceblue;
+    
+} 
+ .head{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2em;
+ }
+    a {
+  transform: rotate(-20deg);
+}
+ @media screen and (min-width:580px) {
+    .center{
+        margin-top: 50%;
+        
+    }
+    a{
+      margin-top: 60%;
+    }
+ }
+ @media screen and (min-width:940px) {
+    .center{
+        margin-top: 30%;
+    }
+    a{
+      margin-top: 30%;
+    }
+ }
+    </style>
+</head>
+<body>
+    <div class="head">สวัสดี</div>
+    
+    <div class="center">
+       กดปุ่มนี้
+    </div><div class="a"></div>
+
+
+    <script>
+        const h=document.querySelector(".head")
+        let b = document.querySelector('.center')
+        const a=document.querySelector(".a")
+        let count = 0
+        b.addEventListener("mousedown",()=>{
+            count += 1
+            if(count===1){
+            h.textContent='กดอีกสิ'
+            b.textContent='กดแล้วหรอ'
+            b.style.background="skyblue" 
+            b.style.color="black" 
+            b.style.borderColor="gold" 
+        }else if(count===2){
+            b.style.display='none'
+            h.textContent='ไม่นึกว่ากดเป็นด้วย'
+            a.innerHTML="<a href='hny.html'>กดเพื่อรับรางวัล</a>"
+            
+            
+        }
+        })
+        
+    </script>
+</body>
+</html>
